@@ -1,6 +1,6 @@
-import { resolve } from 'path'
-import { exec } from 'child_process'
-import { promisify } from 'util'
+import { resolve } from 'node:path'
+import { exec } from 'node:child_process'
+import { promisify } from 'node:util'
 
 import { createConnection } from 'mysql2/promise'
 

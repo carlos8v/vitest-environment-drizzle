@@ -1,6 +1,6 @@
 {
   "name": "vitest-environment-drizzle",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "Vitest testing environment for drizzle push scripts",
   "files": [
     "dist/"
@@ -9,7 +9,7 @@
     "clean": "rimraf dist/",
     "prebuild": "npm run clean",
     "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p tsconfig-build.json --outDir dist/esm",
+    "build:esm": "tsc -p tsconfig-build.json --module esnext --outDir dist/esm",
     "build:cjs": "tsc -p tsconfig-build.json --module commonjs --outDir dist/cjs"
   },
   "main": "./dist/cjs/index.js",
@@ -36,7 +36,7 @@
   },
   "peerDependencies": {
     "dotenv": "^16.0.3",
-    "drizzle-kit": "^0.19.13",
+    "drizzle-kit": "^0.31.8",
     "mysql2": "^3.6.1",
     "vitest": ">=0.23.0"
   }

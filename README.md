@@ -19,6 +19,7 @@ Environment will drop your test database depending on your adapter
 
 Databases supported by now:
 - `mysql`
+- `sqlite`
 
 ## Setup Environment
 
@@ -63,3 +64,15 @@ The following keys must be present on your `.env.test` file:
 | `DATABASE_HOST` | Database connection host          | `localhost`, `127.0.0.1` |
 | `DATABASE_PORT` | Database connection port          | `3306`                   |
 | `DATABASE_NAME` | Database name                     | `mydb`                   |
+
+### Sqlite config
+
+If you are using the sqlite adapter only the `DATABASE_NAME` env is required. The database file will be written to the
+`/tmp` directory.
+
+Make sure to use only the name: 
+
+- `DATABASE_NAME=mydb` :heavy_check_mark:
+- `DATABASE_NAME=mydb.db` :heavy_check_mark:
+- `DATABASE_NAME=file:/mydb` :heavy_multiplication_x:
+- `DATABASE_NAME=../mydb` :heavy_multiplication_x:

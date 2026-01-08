@@ -1,7 +1,7 @@
 export type DrizzleEnvironmentOptions = {
   envFile: string
   schemaPrefix: string
-  adapter: 'mysql'
+  adapter: 'mysql' | 'sqlite'
   databaseEnvName: string
 }
 
@@ -21,6 +21,12 @@ export type EnvironmentAdapterOptions = {
 
 export type MysqlEnvironmentAdapterOptions = {
   connectionString: string
+  databaseName: string
+  databaseSchema: string
+  schemaPrefix: string
+}
+
+export type SqliteEnvironmentAdapterOptions = {
   databaseName: string
   databaseSchema: string
   schemaPrefix: string

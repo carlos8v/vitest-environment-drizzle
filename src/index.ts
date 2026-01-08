@@ -6,9 +6,11 @@ import { Environment } from 'vitest'
 import { DrizzleEnvironmentOptions } from './@types'
 
 import mysqlAdapter from './adapters/mysqlAdapter'
+import sqliteAdapter from './adapters/sqliteAdapter'
 
 const supportedAdapters = {
   mysql: mysqlAdapter,
+  sqlite: sqliteAdapter,
 }
 
 export default <Environment>{
