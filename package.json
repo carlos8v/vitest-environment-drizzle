@@ -1,6 +1,6 @@
 {
   "name": "vitest-environment-drizzle",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Vitest testing environment for drizzle push scripts",
   "files": [
     "dist/"

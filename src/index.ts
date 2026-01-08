@@ -15,7 +15,7 @@ const supportedAdapters = {
 
 export default <Environment>{
   name: 'drizzle',
-  transformMode: 'ssr',
+  viteEnvironment: 'ssr',
   async setup(global, options = {}) {
     const {
       adapter = 'mysql',
